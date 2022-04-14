@@ -10,24 +10,27 @@
     <script src="https://kit.fontawesome.com/13eb2ac932.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav id="navbar">
-      <p>Surry Jones Mowery | Web Developer</p>
-      <ul>
-        <li>
-          <a href="#welcome-section">About</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header-section">
+      <div class="gradient-header"></div>
+      <nav id="navbar">
+        <p>Surry Jones Mowery</p>
+        <ul>
+          <li>
+            <a class="gradient-link" href="#welcome-section">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+  </div>
     <main id="main">
       <section id="welcome-section">
         <h1>Hi, I'm Surry</h1>
-        <p class="subtitle">Web Developer, current Customer Success Manager</p>
+        <p class="subtitle">Front-End Developer, previous Customer Success Manager</p>
         <p class="long-description">I have 10 years of experience providing high-touch customer support for clients, anticipating their needs, prioritizing issues, and communicating between teams – a blend of empathy, customer advocacy and creative problem solving.</p>
         <p class="long-description">I'm excited to bring these qualities to a developer role and thrive in an environment that prioritizes learning, teamwork and diversity.</p>
       </section>
@@ -37,7 +40,7 @@
           <div class="project-tile">
             <a href="https://festive-joliot-8258ef.netlify.app/" target="_blank" class="project-link">
               <img src="https://www.dropbox.com/s/hcrlux03zcrhqmy/coffee-shop.png?raw=1" alt="Coffee-Shop-project" class="project-image"/>
-              <div class="project-title"><h3>Coffee Shop site</h3><p>A prototype website for my friend's coffee shop, Ten Ton Coffee. Made with Vue, Nuxt, Axios, SCSS and deployed with Netlify</p></div>
+              <div class="project-title"><h3>Coffee Shop website</h3><p>A prototype site for my friend's coffee shop, Ten Ton Coffee. Made with Vue, Nuxt, Axios, SCSS and deployed with Netlify</p></div>
             </a>
           </div>
           <div class="project-tile">
@@ -75,15 +78,16 @@
         </div>
       </section>
       <section id="contact">
-        <h2>Let's work together!</h2>
-        <p>Happy to connect anytime</p>
-        <ul>
+        <h2>Get in Touch</h2>
+        <p>I'm happy to connect!</p>
+        <ul class="footer-line">
+          <li><a href="mailto:surryjm@gmail.com" target="_blank"><i class="fas fa-envelope"></i>Email</a></li>
           <li><a href="https://www.linkedin.com/in/surryjmowery/" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
           <li><a href="https://github.com/surryjm" target="_blank"><i class="fab fa-github"></i>Github</a></li>
-          <li><a id="profile-link" href="https://codepen.io/surry/pens/showcase" target="_blank"><i class="fab fa-codepen"></i>CodePen</a></li>
+          <!--<li><a id="profile-link" href="https://codepen.io/surry/pens/showcase" target="_blank"><i class="fab fa-codepen"></i>CodePen</a></li>-->
           
         </ul>
-        <p class="copyright">&copy; Copyright 2021 Surry Jones Mowery</p>
+        <!--<p class="copyright">Thanks for stopping by!</p>-->
       </section>
     </main>
     <!--<footer></footer>-->

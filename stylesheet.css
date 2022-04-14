@@ -11,38 +11,74 @@ body {
   font-size: 1.4rem;
   color: #000000;
 }
-#navbar {
+.header-section {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.gradient-header {
+  top: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 300% 300%;
+	animation: gradient 15s ease infinite;
+	height: 12px;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#navbar {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 10;
-  background-color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
   border-bottom: 1px solid #bcbcbc;
 }
 #navbar > p {
   margin-left: 2%;
-  margin: 1.5% 0 1.5% 2%;
+  margin: 1.5% 0 1.5% 20%;
 }
 #navbar ul {
   display: flex;
   flex-direction: row;
-  margin: 1.5% 2% 1.5% 0;
+  margin: 1.5% 20% 1.5% 0;
 }
 #navbar ul :not(:last-child) {
   margin-right: 3rem;
 }
 #navbar li > a {
-  background-image: linear-gradient(180deg,transparent 65%,#08fdd8 0);
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size .4s ease;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 7px;
 }
-#navbar li > a:hover {
-  background-size: 100% 100%;
+#navbar li > a:hover:after {
+  left: 0;
+  width: 100%;
+}
+#navbar li > a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  right: 0;
+  position: absolute;
+  background: linear-gradient(to left, #ee7752, #e73c7e, #23a6d5, #23d5ab 100%);
+  background-size: 300% 300%;
+  transition: width .5s ease 0s, right .5s ease 0s;
+  animation: gradient 15s ease infinite;
+  width: 0;
 }
 li {
   list-style-type: none;
@@ -70,8 +106,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /*width: 100%;*/
   height: 100vh;
+  margin: 0 20% 0 20%;
 }
 #welcome-section h1 {
   font-size: 4rem;
@@ -82,7 +119,7 @@ main {
   margin-bottom: 2rem;
 }
 .long-description {
-  width: 70%;
+  /*width: 70%;*/
   line-height: 1.7;
   margin-top: 1rem;
 }
@@ -93,7 +130,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 450px));
   grid-gap: 1rem;
-  margin: 1rem 2% 3rem 2%;
+  margin: 1rem 20% 3rem 20%;
   justify-content: space-evenly;
   font-size: 1.2rem;
 }
@@ -147,7 +184,7 @@ main {
 #contact {
   color: #ffffff;
   background-color: #000000;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 i {
   margin-right: .75rem;
@@ -168,10 +205,9 @@ i {
 #contact li > a:hover {
   color: #08fdd8;
 }
-.copyright {
-  font-size: 1rem;
-  border-top: 1px solid #a1a1a1;
-  padding-top: 1rem;
+.footer-line {
+  border-bottom: 1px solid #a1a1a1;
+  padding-bottom: 4rem;
   margin: 3rem 30% 0 30%;
 }
 @media screen and (max-width: 768px) {
