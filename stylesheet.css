@@ -21,6 +21,7 @@ body {
 .gradient-header {
   top: 0;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  /*background: linear-gradient(to left, #ffb2e6, #d972ff, #8447ff, #8cffda 100%);*/
 	background-size: 300% 300%;
 	animation: gradient 15s ease infinite;
 	height: 12px;
@@ -43,16 +44,16 @@ body {
   justify-content: space-between;
   background-color: #000000;
   color: #ffffff;
-  border-bottom: 1px solid #bcbcbc;
+  border: none;
 }
 #navbar > p {
   margin-left: 2%;
-  margin: 1.5% 0 1.5% 20%;
+  margin: 2% 0 2% 20%;
 }
 #navbar ul {
   display: flex;
   flex-direction: row;
-  margin: 1.5% 20% 1.5% 0;
+  margin: 2% 20% 2% 0;
 }
 #navbar ul :not(:last-child) {
   margin-right: 3rem;
@@ -78,6 +79,7 @@ body {
   right: 0;
   position: absolute;
   background: linear-gradient(to left, #ee7752, #e73c7e, #23a6d5, #23d5ab 100%);
+  /*background: linear-gradient(to left, #cdb4db, #ffc8dd, #ffafcc, #bde0fe, #a2d2ff 100%);*/
   background-size: 300% 300%;
   transition: width .5s ease 0s, right .5s ease 0s;
   animation: gradient 15s ease infinite;
@@ -99,13 +101,15 @@ a {
 a:hover {
  color: #000000;
 }
-h1, h2, h3 {
+h1, h3, .subtitle {
   font-family: 'Noto Serif', serif;
   font-weight: 700;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 1.1rem;
+  font-weight: normal;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 main {
   margin: 1% 0 0 0;
@@ -115,16 +119,22 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  /*width: 100%;*/
-  height: 100vh;
-  margin: 0 20% 0 20%;
+  height: 50vh;
+  padding: 0 20% 0 20%;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
 }
 #welcome-section h1 {
   font-size: 5rem;
   padding-bottom: 2rem;
 }
+#welcome-section > .welcome-subtitle {
+  font-size: 2.75rem;
+  border: none;
+}
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 .long-description {
@@ -133,14 +143,22 @@ main {
   margin-top: 1rem;
 }
 #about, #projects {
-  padding: 5rem 1rem 1rem 1rem;
+  margin: 0 20% 0 20%;
+}
+#about, #projects {
+  padding: 10rem 0 1rem 0;
+}
+#projects {
+  padding-bottom: 7rem;
+}
+#projects > .subtitle {
+  margin-bottom: .75rem;;
 }
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 450px));
   grid-gap: 1rem;
-  margin: 1rem 20% 3rem 20%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 1.2rem;
 }
 .project-image {
@@ -187,16 +205,39 @@ main {
   text-align: left;
   line-height: 1.7;
 }
-#projects, #contact {
-  text-align: center;
-}
 #contact {
   color: #ffffff;
   background-color: #000000;
-  padding: 4rem 0;
+  padding: 2rem 0 6rem 0;
+  text-align: center;
+}
+#contact > .subtitle {
+  font-size: 2.5rem;
 }
 i {
   margin-right: .75rem;
+}
+.angle-contact {
+  background-color: #000000;
+  height: 150px;
+  clip-path: polygon(100% 100%, 0 100%, 0 0);
+  /*clip-path: polygon(0 0, 100% 0, 100% 70%, 77% 100%, 12% 42%, 0 60%);*/
+  border: none;
+}
+.angle-welcome {
+  height: 150px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  /*clip-path: polygon(100% 100%, 100% 0, 0 0);*/
+  border: none;
+  background-color: #000000;
+}
+.angle-nav {
+  /*height: 150px;*/
+  /*clip-path: polygon(100% 100%, 100% 0, 0 0);*/
+  /*clip-path: polygon(100% 100%, 100% 0, 0 0);*/
+  /*clip-path: polygon(0 0, 100% 0, 100% 70%, 77% 100%, 12% 42%, 0 60%);*/
+  border: none;
+  background-color: #000000;
 }
 #contact a {
   color: #ffffff;
@@ -205,15 +246,12 @@ i {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   font-size: 1.3rem;
 }
 #contact > ul :not(:last-child) {
   margin-right: 4rem;
 }
-/* #contact li > a:hover {
-  color: #ee7752;
-} */
 .footer-line {
   border-bottom: 1px solid #a1a1a1;
   padding-bottom: 4rem;
@@ -245,7 +283,7 @@ i {
     margin: 0 15px 0 15px;
   }
   #welcome-section h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     padding: .5rem;
   }
   .subtitle {
