@@ -12,9 +12,12 @@
   <body>
     <div id="#top" class="header-section">
       <div class="gradient-header"></div>
-      <nav id="navbar">
+      <nav id="navbar" class="navbar">
         <p><a class="logo" href="#top">Surry Jones Mowery</a></p>
         <ul>
+          <li>
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="openNav()"><i class="fa fa-bars"></i></a>
+          </li>
           <li>
             <a class="gradient-link" href="#about">About</a>
           </li>
@@ -24,6 +27,7 @@
           <li>
             <a class="gradient-link" href="#contact">Contact</a>
           </li>
+          
         </ul>
       </nav>
       <div class="angle-nav"></div>
@@ -31,8 +35,18 @@
     <main id="main">
       <section id="welcome-section">
         <h1>Hi! I'm Surry</h1>
-        <p class="welcome-subtitle">I'm a front-end developer based in Seattle</p>
-        <p class="welcome-subtitle"></p>
+        <p class="welcome-subtitle">I'm a Seattle-based front-end developer</p>
+        <p class="welcome-subtitle">and<span class="container-rotate">
+            <span class="rotate">a Mom.</span>
+            <span class="rotate">an instructional assistant.</span>
+            <span class="rotate">a runner.</span>
+            <span class="rotate">a hiker.</span>
+            <span class="rotate">a Star Wars nerd.</span>
+            <span class="rotate">a pun enthusiast.</span>
+            <span class="rotate">a baker.</span>
+            <span class="rotate">an eternal student.</span>
+          </span>
+        </p>
       </section>
       <div class="angle-welcome"></div>
       <section id="about">
@@ -43,7 +57,7 @@
       </section>
       <section id="projects">
         <h2>Projects</h2>
-        <p class="subtitle">A Selection of Things I've Built</p>
+        <p class="subtitle">A Few Things I've Built</p>
         <div class="projects-container">
           <div class="project-tile">
             <a href="https://festive-joliot-8258ef.netlify.app/" target="_blank" class="project-link">
@@ -101,5 +115,6 @@
       </section>
     </main>
     <!--<footer></footer>-->
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
