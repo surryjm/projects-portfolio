@@ -281,12 +281,14 @@ i {
   height: 150px;
   clip-path: polygon(100% 100%, 0 100%, 0 0);
   border: none;
+  margin-bottom: -.5px;
 }
 .angle-welcome {
   height: 150px;
   clip-path: polygon(0 0, 100% 0, 0 100%);
   border: none;
   background-color: #000000;
+  margin-top: -.5px;
 }
 .angle-nav {
   border: none;
@@ -332,6 +334,8 @@ i {
   }
   .navbar > ul > li:not(:first-child) {
     display: none;
+    transform: translateY(100vh);
+    transition: all .5s ease-in-out;
   }
   .navbar > ul > li:first-child > .hamburger-icon {
     display: block;
@@ -339,9 +343,24 @@ i {
   .navbar > ul > li:first-child {
     margin: 0 0 0 auto;
   }
-  .navbar.responsive > ul > li {
+  .navbar.nav-open > ul > li {
     display: block;
-    margin-bottom: 3rem;
+    opacity: 1;
+    margin-bottom: 2rem;
+    transform: translateY(0);
+    transition: all .5s ease-in-out;
+  }
+  .navbar.nav-close > ul > li {
+    display: none;
+    opacity: 0;
+    /* transform: translateY(350px); */
+    transition: all 2s ease-in-out;
+  }
+  .blur {
+    filter: blur(5px) brightness(0.7);
+    pointer-events: none;
+    user-select: none;
+    transition: all .25s;
   }
   #welcome-section {
     padding: 9rem 5% 0 5%;
@@ -406,6 +425,11 @@ i {
   body {
     font-size: 1.3rem;
   }
+  /* .no-blur {
+    filter: none;
+    pointer-events: initial;
+    user-select: initial;
+  } */
   .subtitle {
     font-size: 1.4rem;
   }
