@@ -46,13 +46,13 @@ body {
   border: none;
 }
 .navbar > p {
-  margin: 2% 0 2% 20%;
+  margin: 2% 0 2% 15%;
   width: 225px;
 }
 .navbar ul {
   display: flex;
   flex-direction: row;
-  margin: 2% 20% 2% 0;
+  margin: 2% 15% 2% 0;
 }
 .navbar ul :not(:last-child) {
   margin-right: 3rem;
@@ -82,6 +82,9 @@ body {
   transition: width .5s ease 0s, right .5s ease 0s;
   animation: gradient 15s ease infinite;
   width: 0;
+}
+.nav-links {
+  text-transform: uppercase;
 }
 .hamburger-icon {
   display: none;
@@ -182,7 +185,7 @@ main {
   justify-content: center;
   align-items: left;
   height: 70vh;
-  padding: 10% 20% 0 20%;
+  padding: 10% 15% 0 15%;
   border: none;
   background-color: #000000;
   color: #ffffff;
@@ -204,7 +207,7 @@ main {
   margin-top: 1rem;
 }
 #about, #projects {
-  margin: 0 20% 0 20%;
+  margin: 0 15% 0 15%;
   padding: 10rem 0 1rem 0;
 }
 #projects {
@@ -312,7 +315,14 @@ i {
   padding-bottom: 4rem;
   margin: 3rem 17% 0 17%;
 }
-@media screen and (max-width: 768px) {
+.blur {
+  filter: blur(5px) brightness(0.7);
+  pointer-events: none;
+  user-select: none;
+  transition: all .25s;
+}
+/****** Mobile devices ******/
+@media screen and (max-width: 500px) {
   body {
     font-size: 1.2rem;
   }
@@ -346,21 +356,14 @@ i {
   .navbar.nav-open > ul > li {
     display: block;
     opacity: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     transform: translateY(0);
     transition: all .5s ease-in-out;
   }
   .navbar.nav-close > ul > li {
     display: none;
     opacity: 0;
-    /* transform: translateY(350px); */
     transition: all 2s ease-in-out;
-  }
-  .blur {
-    filter: blur(5px) brightness(0.7);
-    pointer-events: none;
-    user-select: none;
-    transition: all .25s;
   }
   #welcome-section {
     padding: 9rem 5% 0 5%;
@@ -384,10 +387,7 @@ i {
     margin-top: 1rem;
   }
   #about {
-    padding: 0;
     margin: 0 5% 0 5%;
-    /* margin: 0 20% 0 20%;
-    padding: 10rem 0 1rem 0; */
   }
   #projects {
     padding: 9rem 0 1rem 0;
@@ -403,7 +403,7 @@ i {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 2rem 33% 0 38%;
+    margin: 2rem 33% 0 40%;
     font-size: 1.3rem;
   }
   #contact ul > li {
@@ -421,28 +421,153 @@ i {
     margin: 3rem 17% 0 5%;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/****** iPads, Tablets ******/
+@media screen and (min-width: 501px) and (max-width: 768px) {
   body {
     font-size: 1.3rem;
   }
-  /* .no-blur {
-    filter: none;
-    pointer-events: initial;
-    user-select: initial;
-  } */
+  .navbar {
+    padding-top: 1rem;
+  }
+  .navbar > p {
+    text-align: left;
+    padding-bottom: 1rem;
+    margin: 2% 0 2% 5%;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1rem 0 0;
+    margin: 0;
+    width: 57vw;
+  }
+  .navbar > ul > li:not(:first-child) {
+    display: none;
+    transform: translateY(100vh);
+    transition: all .5s ease-in-out;
+  }
+  .navbar > ul > li:first-child > .hamburger-icon {
+    display: block;
+  }
+  .navbar > ul > li:first-child {
+    margin: 0 0 1.5rem auto;
+  }
+  .navbar.nav-open > ul > li {
+    display: block;
+    opacity: 1;
+    margin-bottom: 3.5rem;
+    transform: translateY(0);
+    transition: all .5s ease-in-out;
+  }
+  .navbar.nav-close > ul > li {
+    display: none;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+  }
+  #welcome-section {
+    padding: 9rem 5% 0 5%;
+    margin: 0;
+  }
+  #welcome-section h1 {
+    font-size: 4rem;
+    padding: 0 1rem .75rem 0;
+  }
+  #welcome-section > .welcome-subtitle {
+    font-size: 1.5rem;
+  }
   .subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
   .long-description {
-    line-height: 1.7;
     width: 100%;
-    padding: 0 3rem 0 3rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  #about {
+    margin: 0 5% 0 5%;
+  }
+  #projects {
+    padding: 9rem 0 1rem 0;
+    margin: 0 5% 0 5%;
+  }
+  #about > .subtitle, #projects > .subtitle {
+    text-align: left;
+  }
+  #contact {
+    padding: 1rem 0 1rem 0;
   }
   #contact ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 2rem 33% 0 40%;
+    margin: 2rem 30% 0 43%;
     font-size: 1.3rem;
+  }
+  #contact ul > li {
+    padding: 20px 0 20px 0;
+  }
+  #contact > ul :not(:last-child) {
+    margin-right: 0;
+  }
+  .copyright {
+    margin: 3rem 0 0 0;
+  }
+  .footer-line {
+    border: none;
+    padding-bottom: 4rem;
+    margin: 3rem 17% 0 5%;
+  }
+}
+/****** Small screens, laptops ******/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar ul {
+    margin: 3% 5% 3% 0;
+  }
+  .navbar > p {
+    margin: 3% 0 3% 5%;
+  }
+  #welcome-section {
+    padding: 10% 5% 0 5%;
+  }
+  #welcome-section h1 {
+    font-size: 4rem;
+  }
+  #welcome-section > .welcome-subtitle {
+    font-size: 2.25rem;
+  }
+  #about, #projects {
+    margin: 0 5% 0 5%;
+    padding: 10rem 0 1rem 0;
+  }
+  .footer-line {
+    padding-bottom: 4rem;
+    margin: 3rem 10% 0 10%;
+  }
+}
+/****** Desktops, large screens ******/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .navbar ul {
+    margin: 3% 10% 3% 0;
+  }
+  .navbar > p {
+    margin: 3% 0 3% 10%;
+  }
+  #welcome-section {
+    padding: 10% 10% 0 10%;
+  }
+  #welcome-section h1 {
+    font-size: 4.5rem;
+  }
+  #welcome-section > .welcome-subtitle {
+    font-size: 2.5rem;
+  }
+  #about, #projects {
+    margin: 0 10% 0 10%;
+  }
+  .footer-line {
+    margin: 3rem 15% 0 15%;
   }
 }
