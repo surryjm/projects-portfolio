@@ -46,13 +46,13 @@ body {
   border: none;
 }
 .navbar > p {
-  margin: 2% 0 2% 15%;
+  margin: 2% 0 2% 12%;
   width: 225px;
 }
 .navbar ul {
   display: flex;
   flex-direction: row;
-  margin: 2% 15% 2% 0;
+  margin: 2% 12% 2% 0;
 }
 .navbar ul :not(:last-child) {
   margin-right: 3rem;
@@ -185,7 +185,7 @@ main {
   justify-content: center;
   align-items: left;
   height: 70vh;
-  padding: 10% 15% 0 15%;
+  padding: 10% 12% 0 12%;
   border: none;
   background-color: #000000;
   color: #ffffff;
@@ -207,7 +207,7 @@ main {
   margin-top: 1rem;
 }
 #about, #projects {
-  margin: 0 15% 0 15%;
+  margin: 0 12% 0 12%;
   padding: 10rem 0 1rem 0;
 }
 #projects {
@@ -218,9 +218,9 @@ main {
 }
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 450px));
-  grid-gap: 1rem;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  justify-items: center;
   font-size: 1.2rem;
 }
 .project-image {
@@ -233,13 +233,14 @@ main {
   transition: all .3s linear;
   border: 1px solid #fff;
   max-height: 284.5px;
+  max-width: 450px;
 }
 .project-tile .project-title {
   display: none;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   top: 5%;
 }
@@ -396,6 +397,9 @@ i {
   #about > .subtitle, #projects > .subtitle {
     text-align: left;
   }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
   #contact {
     padding: 1rem 0 1rem 0;
   }
@@ -496,6 +500,9 @@ i {
   #about > .subtitle, #projects > .subtitle {
     text-align: left;
   }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
   #contact {
     padding: 1rem 0 1rem 0;
   }
@@ -542,6 +549,9 @@ i {
     margin: 0 5% 0 5%;
     padding: 10rem 0 1rem 0;
   }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
   .footer-line {
     padding-bottom: 4rem;
     margin: 3rem 10% 0 10%;
@@ -550,13 +560,13 @@ i {
 /****** Desktops, large screens ******/
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .navbar ul {
-    margin: 3% 10% 3% 0;
+    margin: 3% 8% 3% 0;
   }
   .navbar > p {
-    margin: 3% 0 3% 10%;
+    margin: 3% 0 3% 8%;
   }
   #welcome-section {
-    padding: 10% 10% 0 10%;
+    padding: 10% 8% 0 8%;
   }
   #welcome-section h1 {
     font-size: 4.5rem;
@@ -565,7 +575,7 @@ i {
     font-size: 2.5rem;
   }
   #about, #projects {
-    margin: 0 10% 0 10%;
+    margin: 0 8% 0 8%;
   }
   .footer-line {
     margin: 3rem 15% 0 15%;
