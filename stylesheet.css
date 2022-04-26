@@ -402,7 +402,7 @@ i {
     grid-template-columns: 1fr;
   } */
   #contact {
-    padding: 1rem 5% 1rem 5%;
+    padding: 1rem 5% 0 5%;
   }
   #contact > .subtitle {
     font-size: 1.7rem;
@@ -425,7 +425,7 @@ i {
   }
   .footer-line {
     border: none;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     margin: 3rem 17% 0 5%;
   }
 }
