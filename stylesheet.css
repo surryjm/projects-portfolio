@@ -247,14 +247,26 @@ main {
   width: 55%;
 }
 .project-link {
-  padding-right: 30px;
+  margin-right: 30px;
+  width: fit-content;
 }
 .project-link > span, .project-github > span {
   border: 1px solid;
   padding: 20px;
+  transition: .3s;
 }
+.project-link > span:hover, .project-github > span:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 20px;
+}
+/* .project-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+} */
 .project-github {
-
+  width: fit-content;
 }
 /* .project-tile {
   position: relative;
@@ -320,9 +332,6 @@ main {
   padding: 2rem 0 6rem 0;
   text-align: center;
 }
-/* #contact > .subtitle {
-  font-size: 2.5rem;
-} */
 i {
   margin-right: .75rem;
 }
