@@ -434,6 +434,7 @@ i {
   #welcome-section {
     /* padding: 9rem 5% 0 5%; */
     /* padding: 9rem 0 0 0; */
+    padding-top: 5rem;
     margin: 0;
     /* height: 50vh; */
   }
