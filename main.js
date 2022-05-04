@@ -1,4 +1,4 @@
-(function() {
+// (function() {
 
 const nav = document.getElementById('navbar');
 const hamburgerIcon = document.getElementById('hamburger-icon');
@@ -55,4 +55,4 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-})();
+// })();
