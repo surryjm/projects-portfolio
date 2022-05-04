@@ -16,34 +16,39 @@ const assetsToCache = [
   'images/rock-paper-scissors-image.jpg'
 ];
 
-self.addEventListener('install', event => {
-  console.log('Attempting to install service worker and cache static assets');
-  // self.skipWaiting();
-  event.waitUntil(
-    caches.open(cacheName)
-    .then((cache) => {
-      return cache.addAll(assetsToCache);
-    })
-  );
-});
+// self.addEventListener('install', event => {
+//   console.log('Attempting to install service worker and cache static assets');
+//   // self.skipWaiting();
+//   event.waitUntil(
+//     caches.open(cacheName)
+//     .then((cache) => {
+//       return cache.addAll(assetsToCache);
+//     })
+//   );
+// });
 
-self.addEventListener('fetch', event => {
-  console.log('Fetch event for ', event.request.url);
-  event.respondWith(
-    caches.match(event.request)
-    .then(res => {
-      if (res) {
-        console.log('Found ', event.request.url, ' in cache');
-        return fetch(event.request);
-      }
-    }).catch(error => {
-      console.log(error);
-    })
-    // .then(res => {
-    //   return res || fetch(event.request)
-    // }
-  );
-});
+// self.addEventListener('fetch', event => {
+//   console.log('Fetch event for ', event.request.url);
+//   event.respondWith(
+//     caches.match(event.request)
+//     .then(res => {
+//       if (res) {
+//         console.log('Found ', event.request.url, ' in cache');
+//         return fetch(event.request);
+//       }
+//     }).catch(error => {
+//       console.log(error);
+//     })
+//   );
+// });
+
+
+
+
+
+
+
+
 
 // self.addEventListener('activate', event => {
 //   console.log('Activating new service worker...');

@@ -2,7 +2,7 @@
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
-  "start_url": "https://www.surrymowery.com/",
+  "start_url": "/",
   "name": "Surry Jones Mowery | Front-End Developer",
   "short_name": "Surry Mowery",
   "description": "Front-End Developer with a background in Customer Success and Technical Support",
