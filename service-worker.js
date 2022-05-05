@@ -1,4 +1,4 @@
-const cacheName = 'site-cache-v1';
+/*const cacheName = 'site-cache-v1';
 const assetsToCache = [
   '/',
   'index.html',
@@ -51,4 +51,4 @@ self.addEventListener('fetch', event => {
       return res || fetch(event.request);
     })
   );
-});
+});*/
