@@ -28,23 +28,17 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  //console.log('Fetch event for ', event.request.url);
+  console.log('Fetch event for ', event.request.url);
   event.respondWith(
     caches.match(event.request)
     .then(res => {
       return res || fetch(event.request);
-      // if (res) {
-      //   console.log('Found ', event.request.url, ' in cache');
-      //   return fetch(event.request);
-      // }
-    })//.catch(error => {
-      //console.log(error);
-    //})
+    })
   );
 });
 
 self.addEventListener('activate', event => {
-  //console.log('Activating new service worker...');
+  console.log('Activating new service worker...');
   const cacheAllowlist = [assetsToCache];
   event.waitUntil(
     caches.keys().then(cacheNames => {
