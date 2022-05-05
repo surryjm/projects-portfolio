@@ -17,7 +17,7 @@ const assetsToCache = [
 ];
 
 self.addEventListener('install', event => {
-  console.log('Attempting to install service worker and cache static assets');
+  //console.log('Attempting to install service worker and cache static assets');
   // self.skipWaiting();
   event.waitUntil(
     caches.open(cacheName)
@@ -28,7 +28,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  console.log('Activating new service worker...');
+  //console.log('Activating new service worker...');
   const cacheAllowlist = [assetsToCache];
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -44,7 +44,7 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  console.log('Fetch event for ', event.request.url);
+  //console.log('Fetch event for ', event.request.url);
   event.respondWith(
     caches.match(event.request)
     .then(res => {
