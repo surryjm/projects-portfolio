@@ -250,7 +250,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
-.project-image-text > div:nth-of-type(1) {
+.project-image-text > div:nth-of-type(1), .project-image-text > picture {
   width: 50%;
 }
 .project-link {
@@ -443,7 +443,7 @@ i {
     flex-direction: column;
     justify-content: space-between;
   }
-  .project-image-text > div:nth-of-type(1) {
+  .project-image-text > div:nth-of-type(1), .project-image-text > picture {
     width: 100%;
   }
   .project-image {
@@ -579,7 +579,7 @@ i {
     flex-direction: column;
     justify-content: space-between;
   }
-  .project-image-text > div:nth-of-type(1) {
+  .project-image-text > div:nth-of-type(1), .project-image-text > picture {
     width: 100%;
   }
   .project-image {
@@ -709,7 +709,7 @@ i {
     flex-direction: column;
     justify-content: space-between;
   }
-  .project-image-text > div:nth-of-type(1) {
+  .project-image-text > div:nth-of-type(1), .project-image-text > picture {
     width: 100%;
     margin-bottom: 30px;
   }
