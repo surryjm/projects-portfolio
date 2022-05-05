@@ -8,12 +8,16 @@ const assetsToCache = [
   'images/coffee-shop-image.jpg',
   'images/contact-form-image.jpg',
   'images/education-app-image.jpg',
+  'images/coffee-shop-image.webp',
+  'images/contact-form-image.webp',
+  'images/education-app-image.webp',
   'images/favicon.jpeg',
   'images/icon-192x192.png',
   'images/icon-256x256.png',
   'images/icon-384x384.png',
   'images/icon-512x512.png',
-  'images/rock-paper-scissors-image.jpg'
+  'images/rock-paper-scissors-image.webp',
+  'images/rock-paper-scissors-image.webp'
 ];
 
 self.addEventListener('install', event => {
