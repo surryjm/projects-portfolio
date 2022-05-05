@@ -21,47 +21,40 @@ self.addEventListener('install', event => {
   // self.skipWaiting();
   event.waitUntil(
     caches.open(cacheName)
-    .then((cache) => {
+    .then(cache => {
       return cache.addAll(assetsToCache);
     })
   );
 });
 
-// self.addEventListener('fetch', event => {
-//   console.log('Fetch event for ', event.request.url);
-//   event.respondWith(
-//     caches.match(event.request)
-//     .then(res => {
-//       if (res) {
-//         console.log('Found ', event.request.url, ' in cache');
-//         return fetch(event.request);
-//       }
-//     }).catch(error => {
-//       console.log(error);
-//     })
-//   );
-// });
+self.addEventListener('fetch', event => {
+  //console.log('Fetch event for ', event.request.url);
+  event.respondWith(
+    caches.match(event.request)
+    .then(res => {
+      return res || fetch(event.request);
+      // if (res) {
+      //   console.log('Found ', event.request.url, ' in cache');
+      //   return fetch(event.request);
+      // }
+    })//.catch(error => {
+      //console.log(error);
+    //})
+  );
+});
 
-
-
-
-
-
-
-
-
-// self.addEventListener('activate', event => {
-//   console.log('Activating new service worker...');
-//   const cacheAllowlist = [assetsToCache];
-//   event.waitUntil(
-//     caches.keys().then(cacheNames => {
-//       return Promise.all(
-//         cacheNames.map(cacheName => {
-//           if (cacheAllowlist.indexOf(cacheName) === -1) {
-//             return caches.delete(cacheName);
-//           }
-//         })
-//       );
-//     })
-//   );
-// });
+self.addEventListener('activate', event => {
+  //console.log('Activating new service worker...');
+  const cacheAllowlist = [assetsToCache];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheAllowlist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
