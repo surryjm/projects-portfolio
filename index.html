@@ -93,9 +93,24 @@
             <div class="project-tile">
               <div class="project-image-text">
                 <picture>
-                  <source type="image/webp" srcset="images/coffee-shop-image.webp">
-                  <source type="image/jpeg" srcset="images/coffee-shop-image.jpg">
-                  <img src="images/coffee-shop-image.jpg" alt="Coffee-Shop-project" width="552" height="345" class="project-image"/>
+                  <source 
+                    sizes="(min-width: 501px) 452px,
+                           (min-width: 769px) 337px,
+                           (min-width: 1025px) 452px,
+                           (min-width: 1201px) 552px"  
+                    srcset="images/coffee-shop-image-337.webp 337w,
+                            images/coffee-shop-image-452.webp 452w,
+                            images/coffee-shop-image-552.webp 552w"
+                    type="image/webp" >
+                  <source 
+                    srcset="images/coffee-shop-image.jpg"
+                    type="image/jpeg" >
+                  <img 
+                    src="images/coffee-shop-image.jpg" 
+                    alt="Coffee-Shop-project" 
+                    width="552"
+                    height="345" 
+                    class="project-image"/>
                 </picture>
                 <div class="project-title">
                   <div>
