@@ -13,15 +13,27 @@ const assetsToCache = [
   'images/contact-form-image.jpg',
   'images/education-app-image.jpg',
   'images/coffee-shop-image.webp',
+  'images/coffee-shop-image-552.webp',
+  'images/coffee-shop-image-452.webp',
+  'images/coffee-shop-image-337.webp',
   'images/contact-form-image.webp',
+  'images/contact-form-image-552.webp',
+  'images/contact-form-image-452.webp',
+  'images/contact-form-image-337.webp',
   'images/education-app-image.webp',
+  'images/education-app-image-552.webp',
+  'images/education-app-image-452.webp',
+  'images/education-app-image-337.webp',
   'images/favicon.jpeg',
   'images/icon-192x192.png',
   'images/icon-256x256.png',
   'images/icon-384x384.png',
   'images/icon-512x512.png',
   'images/rock-paper-scissors-image.webp',
-  'images/rock-paper-scissors-image.webp'
+  'images/rock-paper-scissors-image-552.webp',
+  'images/rock-paper-scissors-image-452.webp',
+  'images/rock-paper-scissors-image-337.webp',
+  'images/rock-paper-scissors-image.jpg'
 ];
 
 self.addEventListener('install', event => {
