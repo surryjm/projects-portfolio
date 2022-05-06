@@ -2,7 +2,7 @@ const cacheName = 'site-cache-v1';
 const assetsToCache = [
   '/',
   'index.html',
-  'stylesheet.css',
+  'styles/stylesheet.css',
   'main.js',
   'images/apple-touch-icon.png',
   'images/coffee-shop-image.jpg',
